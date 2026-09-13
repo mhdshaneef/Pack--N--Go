@@ -121,6 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
     restart();
   }
 });
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('pagePreloader');
+  if (preloader) {
+    preloader.style.opacity = '0';
+    setTimeout(() => preloader.remove(), 500);
+  }
+});
 
 
 
